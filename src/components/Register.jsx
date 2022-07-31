@@ -23,6 +23,7 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     createUserWithEmailAndPassword(email, password);
+    e.target.reset();
   };
 
   return (
@@ -37,14 +38,14 @@ const Register = () => {
             name="email"
           />
           <input
-            type="text"
+            type="password"
             placeholder="password"
             className="input w-full max-w-xs bg-gray-50 my-3"
             name="password"
           />
           <input
             className="btn btn-primary flex mx-auto"
-            type="button"
+            type="submit"
             value="Register"
           />
           <p>
